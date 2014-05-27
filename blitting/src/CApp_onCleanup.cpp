@@ -6,6 +6,9 @@
 
 void CApp::onCleanup()
 {
+	// Clean up test
+	SDL_FreeSurface(surfTest);
+	SDL_FreeSurface(surfDisplay);
 	SDL_Quit();
 }
 //EOF

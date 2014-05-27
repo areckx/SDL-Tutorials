@@ -20,6 +20,9 @@
 
 CApp::CApp()
 {
+	// Test surface
+	surfTest = NULL;
+
 	// Keep things tidy
 	surfDisplay = NULL;
 

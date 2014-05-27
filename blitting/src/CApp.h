@@ -49,6 +49,9 @@ class CApp
 		// `surfDisplay` is our "blank piece of paper"
 		SDL_Surface* surfDisplay;
 
+		// Test to make sure the surfaces work
+		SDL_Surface* surfTest;
+
 
 	public:
 

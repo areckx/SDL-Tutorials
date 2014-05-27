@@ -3,9 +3,11 @@
 // Last Modified: 2014-05-16Fri 10:43 PDT
 //
 #include "CApp.h"
+#include "CSurface.h"
 
 bool CApp::onInit()
 {
+	
 	// Start up SDL so we can access its functions
 	
 	// Initialize everything it has 
@@ -25,11 +27,17 @@ bool CApp::onInit()
 	// our images and such
 	//
 	// `SDL_DOUBLEBUF` tells SDL to use double buffering(remove flickering)
-	if ((surfDisplay = SDL_SetVideoMode(640, 480, 32, SDL_HWSURFACE | 
+	if((surfDisplay = SDL_SetVideoMode(640, 480, 32, SDL_HWSURFACE | 
 				SDL_DOUBLEBUF)) == NULL)
 	{
 		return false;
 	}
+
+	if((surfTest = CSurface::onLoad("data/myimage.bmp")) == NULL)
+	{
+		return false;
+	}
+
 	return true;
 }
 //EOF
